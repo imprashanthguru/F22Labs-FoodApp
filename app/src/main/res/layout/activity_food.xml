@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+     android:layout_height="match_parent"
+
+    >
+
+        <android.support.v7.widget.CardView
+
+            android:padding="50dp"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="#ff00"
+            app:cardMaxElevation="100dp"
+            android:foregroundGravity="center"
+            android:id="@+id/af_card_view_id"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00d"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="30dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:id="@+id/af_food_icon_image_view_id"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+
+                    <LinearLayout
+                        android:layout_marginStart="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:id="@+id/af_item_name_text_view_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#000"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+                                    <Button
+
+                                        android:layout_gravity="center"
+                                        android:id="@+id/af_remove_btn_id"
+                                        android:background="@drawable/minus"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:paddingRight="3dp"
+                                        android:paddingLeft="3dp"
+                                        />
+
+                                    <TextView
+                                        android:paddingRight="3dp"
+                                        android:paddingLeft="3dp"
+                                        android:id="@+id/af_item_count_text_view_id"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="15sp"
+                                        android:text="0"
+                                        android:padding="4dp"
+                                        />
+
+                                    <Button
+                                        android:paddingRight="3dp"
+                                        android:paddingLeft="3dp"
+                                        android:padding="4dp"
+                                        android:id="@+id/af_add_btn_id"
+                                        android:background="@drawable/plus_btn"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+
+                                        />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <TextView
+
+                                android:textSize="20sp"
+                                android:drawableStart="@drawable/rupees_icon"
+                                android:id="@+id/af_item_price_text_view_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#5d5d5d"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:baselineAligned="true"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cost: "
+                                 />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:id="@+id/af_current_item_cost_text_view_id"
+
+                                />
+
+
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:layout_marginTop="100dp"
+                    android:id="@+id/af_avg_rating_text_view_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:textColor="#000"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/rating_background"
+                    />
+
+                <RatingBar
+
+                    android:layout_toRightOf="@id/af_avg_rating_text_view_id"
+                    android:layout_marginTop="100dp"
+                    android:theme="@style/Rating_Bar_Style"
+                    android:layout_toEndOf="@id/avg_rating_text_view_id"
+                    android:visibility="visible"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_gravity="right"
+                    android:id="@+id/af_rating_bar_id"
+                    android:layout_marginStart="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+    <WebView
+        android:layout_marginBottom="60dp"
+        android:id="@+id/web_view_id"
+        android:layout_below="@id/af_card_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </WebView>
+
+
+</RelativeLayout>
